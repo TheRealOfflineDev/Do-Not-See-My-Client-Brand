@@ -1,7 +1,8 @@
 # Do Not See My Client Brand
 
 <p align="center">
-  <img src="icon.png" width="128" alt="Do Not See My Client Brand">
+  <img width="256" height="256" alt="dnsmcb" src="https://github.com/user-attachments/assets/1675c776-2d84-4031-82ff-3e7de65a9f56" />
+
 </p>
 
 <p align="center">
