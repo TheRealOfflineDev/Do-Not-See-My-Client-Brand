@@ -1,0 +1,35 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Compiled/generated files
+bin/
+out/
+
+# Gradle generated files
+*.class
+
+run/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# Screenshots / dumps
+screendump/

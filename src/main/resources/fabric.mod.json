@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "dnsmcb",
+  "version": "${version}",
+  "name": "Do Not See My Client Brand",
+  "description": "A client-side Fabric mod that lets you customize the Minecraft client brand sent to servers.",
+  "authors": [
+    "OfflineDev Studios"
+  ],
+      "contact": {
+    "homepage": "https://modrinth.com/project/do-not-see-my-client-brand"
+  },
+  "license": "MIT",
+  "icon": "assets/dnsmcb/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.offlinedevstudios.dnsmcb.DNSMCBClient"
+    ],
+    "modmenu": [
+      "com.offlinedevstudios.dnsmcb.DNSMCBModMenuApi"
+    ]
+  },
+  "mixins": [
+    "dnsmcb.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "modmenu": ">=17.0.0"
+  }
+}
