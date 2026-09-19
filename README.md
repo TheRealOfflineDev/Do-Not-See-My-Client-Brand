@@ -1,7 +1,7 @@
 # Do Not See My Client Brand
 
 <p align="center">
-  <img width="256" height="256" alt="dnsmcb" src="https://github.com/user-attachments/assets/1675c776-2d84-4031-82ff-3e7de65a9f56" />
+  <img width="256" height="256" alt="dnsmcb" src="https://github.com/user-attachments/assets/25209aa8-132a-4645-ba19-e3ccbe3d934c" />
 
 </p>
 
@@ -9,15 +9,30 @@
   A client-side Fabric mod that lets you customize the Minecraft client brand sent to servers.
 </p>
 
----
+<p align="center">
+  <a href="https://modrinth.com/mod/do-not-see-my-client-brand">
+    <img src="https://img.shields.io/badge/Modrinth-Do%20Not%20See%20My%20Client%20Brand-1bd96a?logo=modrinth&logoColor=white" alt="Modrinth">
+  </a>
+  <img src="https://img.shields.io/badge/Minecraft-1.21.11-62b47a?logo=minecraft&logoColor=white" alt="Minecraft 1.21.11">
+  <img src="https://img.shields.io/badge/Fabric-1.21.11-dbd0b4?logo=fabric&logoColor=black" alt="Fabric">
+</p>
 
 ## About
 
-**Do Not See My Client Brand** is a client-side Minecraft Fabric mod for **Minecraft 1.21.11**.
+**Do Not See My Client Brand** is a client-side Fabric mod for Minecraft **1.21.11**.
 
-The mod lets you change the client brand that Minecraft reports to servers through a simple in-game interface.
+It lets you customize the client brand sent to Minecraft servers through an in-game configuration screen.
 
-It does not require anything to be installed on the server.
+The mod is client-side and does not need to be installed on a server.
+
+## Features
+
+* Change the client brand sent to servers
+* In-game configuration screen
+* Reset the brand to the current client brand
+* Client-side
+* Fabric based
+* Mod Menu integration
 
 ## Requirements
 
@@ -27,50 +42,71 @@ It does not require anything to be installed on the server.
 * Fabric Loader
 * Fabric API
 
-### Mod Dependencies
+### Dependencies
 
-* **Fabric API**
-* **Mod Menu 17 or newer**
+| Dependency | Required        |
+| ---------- | --------------- |
+| Fabric API | Yes             |
+| Mod Menu   | **17 or newer** |
 
-Fabric API is required by the mod.
+Fabric API is required to run the mod.
 
-Mod Menu is used to access the mod's configuration screen.
+Mod Menu **17+** is required for the mod's Mod Menu integration.
 
-## Development Requirements
+## Installation
 
-To build the project from source, you need:
+1. Install **Minecraft 1.21.11**.
+2. Install **Fabric Loader** for Minecraft 1.21.11.
+3. Install **Fabric API**.
+4. Install **Mod Menu 17 or newer**.
+5. Download the latest release of **Do Not See My Client Brand**.
+6. Put the mod `.jar` into your Minecraft `mods` folder.
+7. Start Minecraft using your Fabric installation.
 
-* **JDK 21**
-* Git
-* An internet connection for Gradle to download dependencies
-* An IDE such as IntelliJ IDEA or Visual Studio Code
-
-Minecraft 1.21.11 development requires JDK 21.
-
-You do **not** need to install Gradle manually because this repository includes the Gradle Wrapper.
+The mod only needs to be installed on the client.
 
 ## Building From Source
 
-### 1. Clone the repository
+### Requirements
+
+You need:
+
+* **Java 21**
+* Git
+* Internet access for Gradle to download dependencies
+
+You do **not** need to install Gradle manually.
+
+The repository includes the Gradle Wrapper:
+
+```text
+gradle/
+gradlew
+gradlew.bat
+```
+
+### Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/TheRealOfflineDev/Do-Not-See-My-Client-Brand.git
 cd Do-Not-See-My-Client-Brand
 ```
 
-### 2. Check Java
+### Check Java
 
-Make sure Java 21 is installed:
+Run:
 
 ```bash
 java -version
 ```
 
-You should see Java 21.
+The project requires **Java 21**.
 
-If Gradle is using the wrong Java installation, check:
+You can also check which Java Gradle is using.
 
-```bash
+On Windows:
+
+```bat
 gradlew.bat --version
 ```
 
@@ -80,9 +116,9 @@ On Linux/macOS:
 ./gradlew --version
 ```
 
-Check that the JVM shown is Java 21.
+Make sure the JVM shown by Gradle is Java 21.
 
-### 3. Build the mod
+### Build the mod
 
 #### Windows
 
@@ -90,27 +126,23 @@ Check that the JVM shown is Java 21.
 gradlew.bat build
 ```
 
-#### Linux / macOS
+#### Linux/macOS
 
 ```bash
 ./gradlew build
 ```
 
-Gradle will download the required Minecraft, Fabric, mappings, and other development dependencies automatically.
+Gradle will download the project's required dependencies automatically.
 
-### 4. Find the built JAR
-
-After a successful build, the mod JAR will be in:
+If the build succeeds, the compiled mod will be located in:
 
 ```text
 build/libs/
 ```
 
-The generated JAR can then be placed in the `mods` folder of a Minecraft 1.21.11 Fabric installation.
+## Running Minecraft From the Development Environment
 
-## Running the Development Client
-
-You can launch a development Minecraft client directly from Gradle.
+You can launch a development Minecraft client directly through Gradle.
 
 ### Windows
 
@@ -118,17 +150,17 @@ You can launch a development Minecraft client directly from Gradle.
 gradlew.bat runClient
 ```
 
-### Linux / macOS
+### Linux/macOS
 
 ```bash
 ./gradlew runClient
 ```
 
-This starts a development instance with the mod loaded.
+This launches the Minecraft development client with the mod loaded.
 
-## Generating Minecraft Sources
+## Generating Sources
 
-If your IDE does not have the Minecraft sources available, run:
+If your IDE does not show the Minecraft source code correctly, run:
 
 ### Windows
 
@@ -136,19 +168,17 @@ If your IDE does not have the Minecraft sources available, run:
 gradlew.bat genSources
 ```
 
-### Linux / macOS
+### Linux/macOS
 
 ```bash
 ./gradlew genSources
 ```
 
-After the task finishes, refresh/reload the Gradle project in your IDE.
+After it finishes, reload the Gradle project in your IDE.
 
-Fabric's development documentation recommends `genSources` for generating the Minecraft sources used while developing.
+## Cleaning the Project
 
-## Cleaning the Build
-
-If you run into Gradle or generated-file issues, clean the project:
+If you need to remove generated build files:
 
 ### Windows
 
@@ -156,7 +186,7 @@ If you run into Gradle or generated-file issues, clean the project:
 gradlew.bat clean
 ```
 
-### Linux / macOS
+### Linux/macOS
 
 ```bash
 ./gradlew clean
@@ -168,61 +198,60 @@ Then build again:
 gradlew.bat build
 ```
 
-## Gradle Wrapper
-
-This repository includes:
-
-```text
-gradlew
-gradlew.bat
-gradle/
-```
-
-These files are intentionally included.
-
-They allow the project to use its configured Gradle version without requiring contributors to install Gradle separately.
-
 ## Project Structure
 
 ```text
-.
+Do-Not-See-My-Client-Brand/
+├── .github/
 ├── gradle/
+│   └── wrapper/
 ├── src/
+├── .gitattributes
+├── .gitignore
 ├── build.gradle
 ├── gradle.properties
 ├── gradlew
 ├── gradlew.bat
-├── settings.gradle
 ├── LICENSE
 ├── README.md
-└── .gitignore
+└── settings.gradle
 ```
 
-Generated directories such as `build/` and `.gradle/` should not be committed to the repository.
+Generated files and directories such as these are ignored:
+
+```text
+.gradle/
+build/
+bin/
+.vscode/
+run/
+screendump/
+```
+
+The Gradle Wrapper is **not** ignored.
 
 ## Modrinth
 
-**Project:** Do Not See My Client Brand
+[Modrinth](https://modrinth.com/mod/do-not-see-my-client-brand)
 
-**Slug:**
+Project slug:
 
 ```text
 do-not-see-my-client-brand
 ```
 
-The Modrinth project is intended for the released Minecraft 1.21.11 builds.
+## Source Code
 
-## Version Support
+[GitHub Repository](https://github.com/TheRealOfflineDev/Do-Not-See-My-Client-Brand)
 
-| Minecraft      | Support                       |
-| -------------- | ----------------------------- |
-| 1.21.11        | Supported                     |
-| Other versions | Not supported by this release |
+## Minecraft Version
 
-This project currently targets **Minecraft 1.21.11** specifically.
+This project currently targets:
 
-Minecraft 26.1+ is a separate version line and should not be treated as compatible with a 1.21.11 Fabric mod. Fabric's porting documentation notes that mods from 1.21.11 and older do not work on 26.1.
+```text
+Minecraft 1.21.11
+```
 
 ## License
 
-See [`LICENSE`](LICENSE) for the license of this project.
+See [`LICENSE`](LICENSE) for the license used by this project.
